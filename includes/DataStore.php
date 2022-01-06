@@ -19,6 +19,15 @@ class DataStore {
 	protected $data = [];
 
 	/**
+	 * Get the total number of items in the data store.
+	 *
+	 * @return int
+	 */
+	public function count() {
+		return count( $this->data );
+	}
+
+	/**
 	 * Delete a value by key.
 	 *
 	 * @param string $key
