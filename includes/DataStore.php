@@ -118,7 +118,7 @@ class DataStore {
 	 * @return string|false JSON string on success, false on failure.
 	 */
 	public function toJson() {
-		return json_encode( (object) $this->data, JSON_PRETTY_PRINT );
+		return json_encode( (object) $this->data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
 	}
 
 }
